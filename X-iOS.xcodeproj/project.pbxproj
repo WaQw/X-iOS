@@ -12,6 +12,10 @@
 		E5CB10572ADC632C0088E5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CB10562ADC632C0088E5F5 /* Assets.xcassets */; };
 		E5CB105B2ADC632C0088E5F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CB105A2ADC632C0088E5F5 /* Preview Assets.xcassets */; };
 		E5CB10702ADC65880088E5F5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB106F2ADC65880088E5F5 /* Home.swift */; };
+		E5CB10722ADC68C30088E5F5 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10712ADC68C30088E5F5 /* Feed.swift */; };
+		E5CB10742ADC68F90088E5F5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10732ADC68F90088E5F5 /* SearchView.swift */; };
+		E5CB10762ADC690A0088E5F5 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10752ADC690A0088E5F5 /* NotificationsView.swift */; };
+		E5CB10782ADC69130088E5F5 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10772ADC69130088E5F5 /* MessagesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		E5CB10582ADC632C0088E5F5 /* X_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = X_iOS.entitlements; sourceTree = "<group>"; };
 		E5CB105A2ADC632C0088E5F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5CB106F2ADC65880088E5F5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E5CB10712ADC68C30088E5F5 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		E5CB10732ADC68F90088E5F5 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E5CB10752ADC690A0088E5F5 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		E5CB10772ADC69130088E5F5 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +90,7 @@
 				E5CB106E2ADC654C0088E5F5 /* Main */,
 				E5CB106D2ADC65480088E5F5 /* Feed */,
 				E5CB106C2ADC65400088E5F5 /* Search */,
-				E5CB106B2ADC65380088E5F5 /* Notification */,
+				E5CB106B2ADC65380088E5F5 /* Notifications */,
 				E5CB106A2ADC652F0088E5F5 /* Messages */,
 				E5CB10692ADC65250088E5F5 /* Authentication */,
 				E5CB10682ADC651D0088E5F5 /* Items */,
@@ -151,20 +159,23 @@
 		E5CB106A2ADC652F0088E5F5 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				E5CB10772ADC69130088E5F5 /* MessagesView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
 		};
-		E5CB106B2ADC65380088E5F5 /* Notification */ = {
+		E5CB106B2ADC65380088E5F5 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				E5CB10752ADC690A0088E5F5 /* NotificationsView.swift */,
 			);
-			path = Notification;
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		E5CB106C2ADC65400088E5F5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				E5CB10732ADC68F90088E5F5 /* SearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -172,6 +183,7 @@
 		E5CB106D2ADC65480088E5F5 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				E5CB10712ADC68C30088E5F5 /* Feed.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -254,9 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CB10742ADC68F90088E5F5 /* SearchView.swift in Sources */,
 				E5CB10552ADC632A0088E5F5 /* ContentView.swift in Sources */,
+				E5CB10722ADC68C30088E5F5 /* Feed.swift in Sources */,
 				E5CB10702ADC65880088E5F5 /* Home.swift in Sources */,
+				E5CB10782ADC69130088E5F5 /* MessagesView.swift in Sources */,
 				E5CB10532ADC632A0088E5F5 /* X_iOSApp.swift in Sources */,
+				E5CB10762ADC690A0088E5F5 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
