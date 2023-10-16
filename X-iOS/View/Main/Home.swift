@@ -10,6 +10,8 @@ import SwiftUI
 struct Home: View {
     
     @State var selectedIndex = 0
+    @State var showCreateTweet = false
+    @State var text = ""
     
     var body: some View {
         VStack {
@@ -79,7 +81,7 @@ struct Home: View {
                     HStack {
                         Spacer()
                         Button(action: {
-                            
+                            self.showCreateTweet.toggle()
                         }, label: {
                             Image("tweet").renderingMode(.template).resizable()
                                 .frame(width: 20, height: 20).padding()
@@ -90,6 +92,9 @@ struct Home: View {
                     }.padding()
                 }.padding(.bottom, 65)
             }
+            .sheet(isPresented: $showCreateTweet, content: {
+                CreateTweetView(text: text)
+            })
         }
     }
 }
