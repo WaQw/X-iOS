@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5930EE52ADCEA5C0005B2FD /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930EE42ADCEA5C0005B2FD /* MessagesView.swift */; };
+		E5930EE72ADCEA6A0005B2FD /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930EE62ADCEA6A0005B2FD /* SearchView.swift */; };
+		E5930EE92ADCEA740005B2FD /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930EE82ADCEA740005B2FD /* NotificationsView.swift */; };
+		E5930EEB2ADCEA7F0005B2FD /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930EEA2ADCEA7F0005B2FD /* MultilineTextField.swift */; };
+		E5930EED2ADCEA890005B2FD /* CreateTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930EEC2ADCEA880005B2FD /* CreateTweetView.swift */; };
+		E5930EEF2ADCEAC90005B2FD /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930EEE2ADCEAC90005B2FD /* Feed.swift */; };
 		E5CB10532ADC632A0088E5F5 /* X_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10522ADC632A0088E5F5 /* X_iOSApp.swift */; };
 		E5CB10552ADC632A0088E5F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10542ADC632A0088E5F5 /* ContentView.swift */; };
 		E5CB10572ADC632C0088E5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CB10562ADC632C0088E5F5 /* Assets.xcassets */; };
 		E5CB105B2ADC632C0088E5F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CB105A2ADC632C0088E5F5 /* Preview Assets.xcassets */; };
 		E5CB10702ADC65880088E5F5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB106F2ADC65880088E5F5 /* Home.swift */; };
-		E5CB10722ADC68C30088E5F5 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10712ADC68C30088E5F5 /* Feed.swift */; };
-		E5CB10742ADC68F90088E5F5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10732ADC68F90088E5F5 /* SearchView.swift */; };
-		E5CB10762ADC690A0088E5F5 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10752ADC690A0088E5F5 /* NotificationsView.swift */; };
-		E5CB10782ADC69130088E5F5 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10772ADC69130088E5F5 /* MessagesView.swift */; };
-		E5CB107A2ADCB63E0088E5F5 /* CreateTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10792ADCB63E0088E5F5 /* CreateTweetView.swift */; };
-		E5CB107C2ADCB9CE0088E5F5 /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB107B2ADCB9CE0088E5F5 /* MultilineTextField.swift */; };
 		E5CB107E2ADCD5380088E5F5 /* TweetCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB107D2ADCD5380088E5F5 /* TweetCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5930EE42ADCEA5C0005B2FD /* MessagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		E5930EE62ADCEA6A0005B2FD /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E5930EE82ADCEA740005B2FD /* NotificationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		E5930EEA2ADCEA7F0005B2FD /* MultilineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
+		E5930EEC2ADCEA880005B2FD /* CreateTweetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTweetView.swift; sourceTree = "<group>"; };
+		E5930EEE2ADCEAC90005B2FD /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		E5CB104F2ADC632A0088E5F5 /* X-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CB10522ADC632A0088E5F5 /* X_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X_iOSApp.swift; sourceTree = "<group>"; };
 		E5CB10542ADC632A0088E5F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,12 +35,6 @@
 		E5CB10582ADC632C0088E5F5 /* X_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = X_iOS.entitlements; sourceTree = "<group>"; };
 		E5CB105A2ADC632C0088E5F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5CB106F2ADC65880088E5F5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		E5CB10712ADC68C30088E5F5 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
-		E5CB10732ADC68F90088E5F5 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		E5CB10752ADC690A0088E5F5 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
-		E5CB10772ADC69130088E5F5 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
-		E5CB10792ADCB63E0088E5F5 /* CreateTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTweetView.swift; sourceTree = "<group>"; };
-		E5CB107B2ADCB9CE0088E5F5 /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
 		E5CB107D2ADCD5380088E5F5 /* TweetCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,11 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5930EE32ADCE8080005B2FD /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		E5CB10462ADC632A0088E5F5 = {
 			isa = PBXGroup;
 			children = (
 				E5CB10512ADC632A0088E5F5 /* X-iOS */,
 				E5CB10502ADC632A0088E5F5 /* Products */,
+				E5930EE32ADCE8080005B2FD /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +104,7 @@
 				E5CB106E2ADC654C0088E5F5 /* Main */,
 				E5CB106D2ADC65480088E5F5 /* Feed */,
 				E5CB106C2ADC65400088E5F5 /* Search */,
-				E5CB106B2ADC65380088E5F5 /* Notification */,
+				E5CB106B2ADC65380088E5F5 /* Notifications */,
 				E5CB106A2ADC652F0088E5F5 /* Messages */,
 				E5CB10692ADC65250088E5F5 /* Authentication */,
 				E5CB10682ADC651D0088E5F5 /* Items */,
@@ -144,6 +152,7 @@
 		E5CB10672ADC65180088E5F5 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				E5930EEC2ADCEA880005B2FD /* CreateTweetView.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -151,6 +160,7 @@
 		E5CB10682ADC651D0088E5F5 /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				E5930EEA2ADCEA7F0005B2FD /* MultilineTextField.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -165,20 +175,23 @@
 		E5CB106A2ADC652F0088E5F5 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				E5930EE42ADCEA5C0005B2FD /* MessagesView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
 		};
-		E5CB106B2ADC65380088E5F5 /* Notification */ = {
+		E5CB106B2ADC65380088E5F5 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				E5930EE82ADCEA740005B2FD /* NotificationsView.swift */,
 			);
-			path = Notification;
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		E5CB106C2ADC65400088E5F5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				E5930EE62ADCEA6A0005B2FD /* SearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -186,7 +199,7 @@
 		E5CB106D2ADC65480088E5F5 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				E5CB10712ADC68C30088E5F5 /* Feed.swift */,
+				E5930EEE2ADCEAC90005B2FD /* Feed.swift */,
 				E5CB107D2ADCD5380088E5F5 /* TweetCellView.swift */,
 			);
 			path = Feed;
@@ -270,12 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5930EE52ADCEA5C0005B2FD /* MessagesView.swift in Sources */,
+				E5930EEF2ADCEAC90005B2FD /* Feed.swift in Sources */,
 				E5CB107E2ADCD5380088E5F5 /* TweetCellView.swift in Sources */,
-				E5CB107A2ADCB63E0088E5F5 /* CreateTweetView.swift in Sources */,
-				E5CB10742ADC68F90088E5F5 /* SearchView.swift in Sources */,
 				E5CB10552ADC632A0088E5F5 /* ContentView.swift in Sources */,
 				E5CB10702ADC65880088E5F5 /* Home.swift in Sources */,
+				E5930EE72ADCEA6A0005B2FD /* SearchView.swift in Sources */,
+				E5930EED2ADCEA890005B2FD /* CreateTweetView.swift in Sources */,
 				E5CB10532ADC632A0088E5F5 /* X_iOSApp.swift in Sources */,
+				E5930EE92ADCEA740005B2FD /* NotificationsView.swift in Sources */,
+				E5930EEB2ADCEA7F0005B2FD /* MultilineTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

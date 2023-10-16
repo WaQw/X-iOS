@@ -40,6 +40,7 @@ struct TweetCellView: View {
                                 .frame(width: proxy.frame(in: .global).width, height: 250)
                                 .cornerRadius(15)
                         }
+                        .frame(height: 250)
                     }
                 })
             })
@@ -74,7 +75,7 @@ struct TweetCellView: View {
                     
                 }, label: {
                     Image("upload")
-                        .resizable()
+                        .resizable().renderingMode(.template)
                         .frame(width: 18, height: 15)
                 }).foregroundColor(.gray)
             })
