@@ -19,6 +19,8 @@
 		E5930EF92ADE239C0005B2FD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930EF82ADE239C0005B2FD /* Extensions.swift */; };
 		E5930EFB2ADF6C250005B2FD /* NotificationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930EFA2ADF6C250005B2FD /* NotificationCellView.swift */; };
 		E5930EFD2ADF70EF0005B2FD /* MessageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930EFC2ADF70EF0005B2FD /* MessageCellView.swift */; };
+		E5930EFF2ADF816F0005B2FD /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930EFE2ADF816F0005B2FD /* TopBar.swift */; };
+		E5930F012ADF84DB0005B2FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930F002ADF84DB0005B2FD /* MainView.swift */; };
 		E5CB10532ADC632A0088E5F5 /* X_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10522ADC632A0088E5F5 /* X_iOSApp.swift */; };
 		E5CB10552ADC632A0088E5F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB10542ADC632A0088E5F5 /* ContentView.swift */; };
 		E5CB10572ADC632C0088E5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CB10562ADC632C0088E5F5 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		E5930EF82ADE239C0005B2FD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E5930EFA2ADF6C250005B2FD /* NotificationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellView.swift; sourceTree = "<group>"; };
 		E5930EFC2ADF70EF0005B2FD /* MessageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellView.swift; sourceTree = "<group>"; };
+		E5930EFE2ADF816F0005B2FD /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		E5930F002ADF84DB0005B2FD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E5CB104F2ADC632A0088E5F5 /* X-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CB10522ADC632A0088E5F5 /* X_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X_iOSApp.swift; sourceTree = "<group>"; };
 		E5CB10542ADC632A0088E5F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				E5CB106F2ADC65880088E5F5 /* Home.swift */,
+				E5930EFE2ADF816F0005B2FD /* TopBar.swift */,
+				E5930F002ADF84DB0005B2FD /* MainView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5930EFD2ADF70EF0005B2FD /* MessageCellView.swift in Sources */,
+				E5930F012ADF84DB0005B2FD /* MainView.swift in Sources */,
 				E5930EE52ADCEA5C0005B2FD /* MessagesView.swift in Sources */,
 				E5930EEF2ADCEAC90005B2FD /* Feed.swift in Sources */,
 				E5CB107E2ADCD5380088E5F5 /* TweetCellView.swift in Sources */,
@@ -310,6 +317,7 @@
 				E5930EFB2ADF6C250005B2FD /* NotificationCellView.swift in Sources */,
 				E5930EF52ADDE7EA0005B2FD /* SearchBar.swift in Sources */,
 				E5930EE72ADCEA6A0005B2FD /* SearchView.swift in Sources */,
+				E5930EFF2ADF816F0005B2FD /* TopBar.swift in Sources */,
 				E5930EED2ADCEA890005B2FD /* CreateTweetView.swift in Sources */,
 				E5CB10532ADC632A0088E5F5 /* X_iOSApp.swift in Sources */,
 				E5930EF72ADDED840005B2FD /* SearchUserCellView.swift in Sources */,
