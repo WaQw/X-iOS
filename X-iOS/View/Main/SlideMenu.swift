@@ -141,6 +141,7 @@ struct SlideMenu: View {
                             Text("Add an existing account")
                                 .foregroundColor(Color("bg"))
                         })
+                        .padding(.top, 5)
                         Spacer(minLength: 0)
                     })
                     .opacity(show ? 0 : 1)
