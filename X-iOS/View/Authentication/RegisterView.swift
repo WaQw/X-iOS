@@ -12,13 +12,14 @@ struct RegisterView: View {
     @State var name = ""
     @State var email = ""
     @State var password = ""
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
             ZStack {
                 HStack {
                     Button(action: {
-                        
+                        presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Text("Cancel")
                             .foregroundColor(.blue)

@@ -93,11 +93,13 @@ struct WelcomeView: View {
                         .frame(width: 320, height: 60, alignment: .center)
                         .foregroundColor(Color(red: 29/255, green: 161/255, blue: 242/255))
                         .overlay(
-                            Text("Create account")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .padding()
+                            NavigationLink(destination: RegisterView().navigationBarHidden(true), label: {
+                                Text("Create account")
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                    .padding()
+                            })
                         )
                 })
                 .padding()
@@ -118,8 +120,10 @@ struct WelcomeView: View {
                     
                     HStack {
                         Text("Have an account already?")
-                        Text("Log in")
-                            .foregroundColor(Color(red: 29/255, green: 161/255, blue: 242/255))
+                        NavigationLink(destination: LoginView().navigationBarHidden(true), label: {
+                            Text("Log in")
+                                .foregroundColor(Color(red: 29/255, green: 161/255, blue: 242/255))
+                        })
                     }
                 }
                     

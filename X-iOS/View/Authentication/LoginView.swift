@@ -12,6 +12,7 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     @State var emailDone = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         if !emailDone {
@@ -20,7 +21,7 @@ struct LoginView: View {
                     ZStack { // to ensure icon is in the center
                         HStack {
                             Button(action: {
-                                
+                                presentationMode.wrappedValue.dismiss()
                             }, label: {
                                 Text("Cancel")
                                     .foregroundColor(.blue)
@@ -50,7 +51,9 @@ struct LoginView: View {
                 
                 VStack {
                     Button(action: {
-                        self.emailDone.toggle()
+                        if !email.isEmpty {
+                            self.emailDone.toggle()
+                        }
                     }, label: {
                         Capsule()
                             .frame(width: 360, height: 40, alignment: .center)
@@ -69,7 +72,7 @@ struct LoginView: View {
                     ZStack { // to ensure icon is in the center
                         HStack {
                             Button(action: {
-                                
+                                presentationMode.wrappedValue.dismiss()
                             }, label: {
                                 Text("Cancel")
                                     .foregroundColor(.blue)
@@ -99,7 +102,7 @@ struct LoginView: View {
                 
                 VStack {
                     Button(action: {
-                        self.emailDone.toggle()
+                        
                     }, label: {
                         Capsule()
                             .frame(width: 360, height: 40, alignment: .center)
