@@ -20,6 +20,7 @@ struct MainView: View {
                         TopBar(x: $x)
                         Home()
                     }
+                    .offset(x: x + width)
                     
                     SlideMenu()
                         .shadow(color: Color.black.opacity(x == 0 ? 0 : 0.1), radius: 5, x: 5, y: 0)
