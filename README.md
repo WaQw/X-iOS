@@ -1,6 +1,13 @@
 # X-iOS
 
-# Used packages
+## Main Technologies Used
+- SwiftUI
+- Node.js
+- MongoDB
+
+## Packages Used
+- express
+- mongoose
 - validator
 - bcryptjs
 - jsonwebtoken
