@@ -46,4 +46,32 @@ router.post("/users/login", async (req, res) => {
   }
 });
 
+// Delete user
+
+router.delete("/users/:id", async (req, res) => {
+  try {
+    const user = await User.findByIdAndDelete(req.params.id);
+    if (!user) {
+      res.status(400).send("User does not exist!");
+    }
+    res.status(200).send("Delete successfully!");
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+// Fetch specific user
+
+router.get("/users/:id", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      res.status(404).send("User does not exist!");
+    }
+    res.status(200).send(user);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
 module.exports = router;
