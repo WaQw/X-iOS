@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
 const bcryptjs = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -60,6 +61,14 @@ const userSchema = new mongoose.Schema({
     type: Array,
     default: [],
   },
+  tokens: [
+    {
+      token: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
 });
 
 // Not display the password to the client when receiving response
@@ -101,6 +110,16 @@ userSchema.statics.findByCredentials = async (email, password) => {
     throw new Error("Wrong password...");
   }
   return user;
+};
+
+// Create tokens
+
+userSchema.methods.generateAuthToken = async function () {
+  const user = this;
+  const token = jwt.sign({ _id: user._id.toString() }, "randomwords");
+  user.tokens = user.tokens.concat({ token });
+  await user.save();
+  return token;
 };
 
 const User = mongoose.model("User", userSchema);
