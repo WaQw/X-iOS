@@ -11,3 +11,5 @@
 - validator
 - bcryptjs
 - jsonwebtoken
+- multer
+- sharp
