@@ -167,4 +167,34 @@ router.put("/users/:id/unfollow", auth, async (req, res) => {
   }
 });
 
+// Update user profile
+
+router.patch("/users/update", auth, async (req, res) => {
+  const allowedUpdates = [
+    "name",
+    "email",
+    "password",
+    "website",
+    "bio",
+    "location",
+  ];
+  const updates = Object.keys(req.body);
+  const isValidOperations = updates.every((update) =>
+    allowedUpdates.includes(update)
+  );
+  if (!isValidOperations) {
+    return res.status(400).send({ error: "Invalid request!" });
+  }
+  try {
+    const user = req.user;
+    updates.forEach((update) => {
+      user[update] = req.body[update];
+    });
+    await user.save();
+    res.status(200).send(user);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 module.exports = router;
