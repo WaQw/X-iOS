@@ -2,6 +2,7 @@ const express = require("express");
 const User = require("../models/user");
 const multer = require("multer");
 const sharp = require("sharp");
+const auth = require("../middleware/auth");
 
 // Original Router
 
@@ -88,19 +89,20 @@ router.get("/users/:id", async (req, res) => {
 
 router.post(
   "/users/me/avatar",
+  auth,
   upload.single("avatar"),
   async (req, res) => {
     const buffer = await sharp(req.file.buffer)
       .resize({ width: 250, height: 250 })
       .png()
       .toBuffer();
-    // if (req.user.avatar != null) {
-    //   req.user.avatar = null;
-    //   req.user.avatarExists = false;
-    // }
-    // req.user.avatar = buffer;
-    // req.user.avatarExists = true;
-    // await req.user.save();
+    if (req.user.avatar != null) {
+      req.user.avatar = null;
+      req.user.avatarExists = false;
+    }
+    req.user.avatar = buffer;
+    req.user.avatarExists = true;
+    await req.user.save();
     res.send(buffer);
   },
   (error, req, res, next) => {
