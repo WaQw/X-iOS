@@ -34,6 +34,17 @@ const tweetSchema = new mongoose.Schema(
   }
 );
 
+// Help to determine whether a tweet has image
+
+tweetSchema.methods.toJSON = function () {
+  const tweet = this;
+  const tweetObj = tweet.toObject();
+  if (tweetObj.image) {
+    tweetObj.image = "true";
+  }
+  return tweetObj;
+};
+
 const Tweet = mongoose.model("Tweet", tweetSchema);
 
 module.exports = Tweet;
