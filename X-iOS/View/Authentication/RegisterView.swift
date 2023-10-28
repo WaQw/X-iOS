@@ -13,6 +13,7 @@ struct RegisterView: View {
     @State var email = ""
     @State var password = ""
     @Environment(\.presentationMode) var presentationMode
+    @StateObject var viewModel = AuthViewModel()
     
     var body: some View {
         VStack {
@@ -62,7 +63,7 @@ struct RegisterView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        
+                        self.viewModel.register(name: name, email: email, password: password, username: name)
                     }, label: {
                         Capsule()
                             .frame(width: 60, height: 30, alignment: .center)
