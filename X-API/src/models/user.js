@@ -98,6 +98,20 @@ userSchema.virtual("tweets", {
   foreignField: "user",
 });
 
+// Create relationship between the user and the notification
+
+userSchema.virtual("notificationSent", {
+  ref: "Notification",
+  localField: "_id",
+  foreignField: "notiSenderId",
+});
+
+userSchema.virtual("notificationReceived", {
+  ref: "Notification",
+  localField: "_id",
+  foreignField: "notiReceiverId",
+});
+
 // Authentication check
 
 userSchema.statics.findByCredentials = async (email, password) => {
