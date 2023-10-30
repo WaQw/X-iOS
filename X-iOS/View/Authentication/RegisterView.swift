@@ -13,7 +13,7 @@ struct RegisterView: View {
     @State var email = ""
     @State var password = ""
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var viewModel = AuthViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {

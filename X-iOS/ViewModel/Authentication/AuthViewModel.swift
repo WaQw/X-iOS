@@ -48,7 +48,7 @@ class AuthViewModel: ObservableObject {
         AuthServices.login(email: email, password: password) { result in
             switch result {
             case .success(let data):
-                guard let user = try? JSONDecoder().decode(APIResponse.self, from: data!) else {
+                guard let user = try? JSONDecoder().decode(APIResponse.self, from: data!) else { // turn data into APIResponse
                     return
                 }
                 // store the user's token to remember the login status
@@ -82,4 +82,14 @@ class AuthViewModel: ObservableObject {
         }
     }
     
+    func logout() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
+        }
+        DispatchQueue.main.async {
+            self.isAuthenticated = false
+        }
+    }
 }
