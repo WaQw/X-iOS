@@ -10,12 +10,14 @@ import SwiftUI
 struct CreateTweetView: View {
     
     @State var text = ""
+    @Binding var show: Bool
+    @ObservedObject var viewModel = CreateTweetViewModel()
     
     var body: some View {
         VStack {
             HStack {
                 Button(action: {
-                    
+                    self.show.toggle()
                 }, label: {
                     Text("Cancel")
                 })
@@ -23,7 +25,10 @@ struct CreateTweetView: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    if text != "" {
+                        self.viewModel.uploadPost(text: text)
+                    }
+                    self.show.toggle()
                 }, label: {
                     Text("Tweet").padding()
                 })
@@ -35,11 +40,5 @@ struct CreateTweetView: View {
             MultilineTextField(text: $text)
         }
         .padding()
-    }
-}
-
-struct CreateTweetView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateTweetView()
     }
 }
