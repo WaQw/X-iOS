@@ -13,8 +13,8 @@ struct CreateTweetView: View {
     @Binding var show: Bool
     @ObservedObject var viewModel = CreateTweetViewModel()
     @State var imagePickerPresented = false
-    @State var selectedImage: UIImage?
-    @State var postImage: Image?
+    @State var selectedImage: UIImage? // for upload
+    @State var postImage: Image? // for preview
     
     var body: some View {
         VStack {
@@ -29,7 +29,7 @@ struct CreateTweetView: View {
                 
                 Button(action: {
                     if text != "" {
-                        self.viewModel.uploadPost(text: text)
+                        self.viewModel.uploadPost(text: text, image: selectedImage)
                     }
                     self.show.toggle()
                 }, label: {
