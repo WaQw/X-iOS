@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct TweetCellView: View {
     
-    var tweet: String
-    var tweetImage: String?
+    @ObservedObject var viewModel: TweetCellViewModel
+    
+    init(viewModel: TweetCellViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         VStack {
@@ -22,27 +26,31 @@ struct TweetCellView: View {
                     .clipShape(Circle())
                 
                 VStack(alignment: .leading, spacing: 10, content: {
-                    Text("John ")
+                    Text("\(self.viewModel.tweet.username) ")
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
                     +
-                    Text("@john_salta")
+                    Text("@\(self.viewModel.tweet.username)")
                         .foregroundColor(.gray)
                     
-                    Text(tweet)
+                    Text(self.viewModel.tweet.text)
                         .frame(maxHeight: 100, alignment: .top)
                     
-                    if let image = tweetImage {
+                    let imageId = viewModel.tweet.id
+                    if viewModel.tweet.image == "true" {
                         GeometryReader { proxy in
-                            Image(image)
+                            KFImage(URL(string: "http://localhost:3000/tweets/\(imageId)/image"))
                                 .resizable()
-                                .aspectRatio(contentMode: .fill)
+                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                 .frame(width: proxy.frame(in: .global).width, height: 250)
                                 .cornerRadius(15)
                         }
                         .frame(height: 250)
                     }
+                    
                 })
+                
+                Spacer()
             })
                 
             // Cell Bottom
@@ -81,12 +89,6 @@ struct TweetCellView: View {
             })
             .padding(.top, 4)
         }
-    }
-}
-
-struct TweetCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        TweetCellView(tweet: sampleText)
     }
 }
 
