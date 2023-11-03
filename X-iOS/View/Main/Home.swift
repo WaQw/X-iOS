@@ -13,12 +13,14 @@ struct Home: View {
     @State var showCreateTweet = false
     @State var text = ""
     
+    let user: User
+    
     var body: some View {
         VStack {
             ZStack {
                 
                 TabView {
-                    Feed()
+                    Feed(user: user)
                         .onTapGesture {
                             self.selectedIndex = 0
                         }
@@ -96,11 +98,5 @@ struct Home: View {
                 CreateTweetView(text: text, show: self.$showCreateTweet)
             })
         }
-    }
-}
-
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
     }
 }
