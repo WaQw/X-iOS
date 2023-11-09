@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SlideMenu: View {
     
+    @ObservedObject var viewModel: AuthViewModel
+    
     @State var show = false
     
     var menuButtons = ["Profile", "Lists", "Topics", "Bookmarks", "Moments"]
@@ -23,21 +25,25 @@ struct SlideMenu: View {
                 
                 VStack(alignment: .leading, content: {
                     
-                    Image("logo")
-                        .resizable()
-                        .frame(width: 60, height: 60)
-                        .clipShape(Circle())
+                    NavigationLink(destination: UserProfile(user: viewModel.currentUser!)) {
+                        Image("logo")
+                            .resizable()
+                            .frame(width: 60, height: 60)
+                            .clipShape(Circle())
+                    }
                     
                     HStack(alignment: .top, spacing: 12, content: {
                         
                         VStack(alignment: .leading, spacing: 12, content: {
                             
-                            Text("John")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .foregroundColor(.black)
+                            NavigationLink(destination: UserProfile(user: viewModel.currentUser!)) {
+                                Text(viewModel.currentUser!.name)
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                            }
                             
-                            Text("@john")
+                            Text("@\(viewModel.currentUser!.username)")
                                 .foregroundColor(.gray)
                             
                             HStack(spacing: 20, content: {
@@ -157,11 +163,5 @@ struct SlideMenu: View {
                 Spacer(minLength: 0)
             })
         }
-    }
-}
-
-struct SlideMenu_Previews: PreviewProvider {
-    static var previews: some View {
-        SlideMenu()
     }
 }
