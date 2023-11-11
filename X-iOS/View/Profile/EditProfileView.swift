@@ -13,10 +13,20 @@ struct EditProfileView: View {
     @State var profileImage: Image?
     @State private var selectedImage: UIImage?
     @State var imagePickerPresented = false
-    @State var name = ""
-    @State var location = ""
-    @State var bio = ""
-    @State var website = ""
+    
+    @Binding var user: User
+    @State var name: String
+    @State var location: String
+    @State var bio: String
+    @State var website: String
+    
+    init(user: Binding<User>) {
+        self._user = user // use the binding variable
+        self._name = State(initialValue: _user.name.wrappedValue ?? "")
+        self._location = State(initialValue: _user.location.wrappedValue ?? "")
+        self._bio = State(initialValue: _user.bio.wrappedValue ?? "")
+        self._website = State(initialValue: _user.website.wrappedValue ?? "")
+    }
     
     var body: some View {
         VStack {
