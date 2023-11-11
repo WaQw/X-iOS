@@ -63,7 +63,7 @@ struct EditProfileView: View {
                             KFImage(URL(string: "http://localhost:3000/users/id/avatar"))
                                 .resizable()
                                 .placeholder {
-                                    Image("blankpp")
+                                    Image("Profile")
                                         .resizable()
                                         .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                         .frame(width: 75, height: 75)
@@ -102,6 +102,9 @@ struct EditProfileView: View {
                     }
                     
                     Spacer()
+                }
+                .onAppear {
+                    KingfisherManager.shared.cache.clearCache()
                 }
                 .padding(.top, -25)
                 .padding(.bottom, -10)
